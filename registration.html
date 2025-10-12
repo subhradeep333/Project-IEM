@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration | MetaSphere 2026</title>
     
-    <link rel="stylesheet" href="/Style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
@@ -25,92 +25,28 @@
     </style>
 </head>
 <body class="antialiased">
-    <div class="main-container">
 
-<header class="bg-black/20 backdrop-blur-lg fixed top-0 left-0 right-0 z-30 py-3 px-4 sm:px-6">
-  <div class="max-w-7xl mx-auto flex justify-between items-center">
-    <!-- Logo -->
-    <div class="flex items-center space-x-2">
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="16" r="16" fill="#F97316"/>
-        <circle cx="16" cy="16" r="12" fill="white" fill-opacity="0.2"/>
-        <circle cx="16" cy="16" r="6" fill="white"/>
-      </svg>
-      <span class="text-xl font-bold text-white">MetaSphere 2026</span>
-    </div>
-
-    <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center ">
-      <nav class="flex items-center space-x-5 text-sm font-medium">
-        <a href="/index.html" class="text-white hover:text-orange-400 transition">Home</a>
-
-        <!-- Authors Dropdown -->
-        <div class="relative">
-          <button onclick="toggleDropdown('authorsDropdown')" class="text-white hover:text-orange-400 transition flex items-center">
-            Authors <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
-          </button>
-          <div id="authorsDropdown" class="absolute mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
-            <a href="/CallPapers.html" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Call For Papers</a>
-            <a href="/PaperSubmit.html" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Paper Submission</a>
-            <a href="index.html#speakers" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Keynote Speakers</a>
-          </div>
+    <header class="bg-black/20 backdrop-blur-lg fixed top-0 left-0 right-0 z-30 py-3 px-4 sm:px-6">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="16" fill="#F97316"/>
+            <circle cx="16" cy="16" r="12" fill="white" fill-opacity="0.2"/>
+            <circle cx="16" cy="16" r="6" fill="white"/>
+          </svg>
+          <span class="text-xl font-bold text-white">MetaSphere 2026</span>
         </div>
+        <nav class="hidden md:flex items-center space-x-5 text-sm font-medium">
+            <a href="/index.html" class="text-white hover:text-orange-400 transition">Home</a>
+            <a href="/CallPapers.html" class="text-white hover:text-orange-400 transition">Call For Papers</a>
+            <a href="/registration.html" class="text-orange-300 font-semibold transition">Registration</a>
+            <a href="/#speakers" class="text-white hover:text-orange-400 transition">Speakers</a>
+            <a href="/Contact.html" class="text-white hover:text-orange-400 transition">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-        <a href="/technical-programs.html" class="text-white hover:text-orange-400 transition">Technical Programs</a>
-        <!-- <a href="/gallery.html" class="text-white hover:text-orange-400 transition">Gallery</a> -->
-        <a href="/registration.html" class="text-white hover:text-orange-400 transition">Registration</a>
-
-        <!-- Committee Dropdown -->
-        <div class="relative">
-          <button onclick="toggleDropdown('committeeDropdown')" class="text-white hover:text-orange-400 transition flex items-center">
-            Committee <i data-lucide="chevron-down" class="w-3.5 h-3.5 ml-1"></i>
-          </button>
-          <div id="committeeDropdown" class="absolute mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden z-50">
-            <a href="/scientific-committee.html" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Scientific Committee</a>
-            <a href="/AdvisoryCommittee.html" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Advisory Committee</a>
-            <a href="/TechCommittee.html" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Technical Programs Committee</a>
-            <a href="/dev.html" class="block px-4 py-2 text-gray-700 hover:bg-orange-100">Developers</a>
-          </div>
-        </div>
-
-        <a href="/TechSponsor.html" class="text-white hover:text-orange-400 transition">Technical Sponsors</a>
-        <a href="/Contact.html" class="text-white hover:text-orange-400 transition">Contact</a>
-      </nav>
-
-      <!-- Register Button -->
-      <a href="/registration.html" class="ml-6 px-4 py-1.5 rounded-md text-sm font-semibold shadow-md transition bg-orange-500 text-white hover:bg-orange-600">
-        Register Now
-      </a>
-    </div>
-
-    <!-- Mobile Hamburger -->
-    <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-md text-white hover:bg-orange-400">
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
-        <line x1="4" x2="20" y1="12" y2="12"/>
-        <line x1="4" x2="20" y1="6" y2="6"/>
-        <line x1="4" x2="20" y1="18" y2="18"/>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="md:hidden hidden bg-black/50 text-white px-6 py-4 space-y-4">
-    <a href="/index.html" class="block hover:text-orange-400">Home</a>
-    <a href="/CallPapers.html" class="block hover:text-orange-400">Call for Papers</a>
-    <a href="/PaperSubmit.html" class="block hover:text-orange-400">Paper Submission</a>
-    <a href="/technical-programs.html" class="block hover:text-orange-400">Technical Programs</a>
-    <!-- <a href="#" class="block hover:text-orange-400">Gallery</a> -->
-    <a href="/registration.html" class="block hover:text-orange-400">Registration</a>
-    <a href="/scientific-committee.html" class="block hover:text-orange-400">Scientific Committee</a>
-    <a href="/AdvisoryCommittee.html" class="block hover:text-orange-400">Advisory Committee</a>
-    <a href="/TechCommittee.html" class="block hover:text-orange-400">Technical Program Committee</a>
-    <a href="/dev.html" class="block hover:text-orange-400">Developers</a>
-    <a href="/TechSponsor.html" class="block hover:text-orange-400">Technical Sponsors</a>
-    <a href="/Contact.html" class="block hover:text-orange-400">Contact</a>
-    <a href="/registration.html" class="block bg-orange-500 text-center rounded-md py-2 text-sm font-semibold hover:bg-orange-600">Register Now</a>
-  </div>
-</header>
-
+    
          <section class="relative pt-60 pb-20 sm:pt-60 sm:pb-24 overflow-hidden">
             <div id="video-slideshow" class="absolute top-0 left-0 w-full h-full z-0">
                 <video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
@@ -119,119 +55,169 @@
                 </video>
             </div>
             <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#FFFBF5] via-[#FFFBF5]/80 to-transparent z-10"></div>
-            
-            <div class="relative max-w-5xl mx-auto text-center px-4 z-20" data-aos="fade-up" data-aos-duration="2000" >
-                 <div class="max-w-5xl mx-auto text-center px-4">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-                    Conference <span class="gradient-text">Registration</span>
-                </h1>
-                <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Secure your place at MetaSphere 2026 and join us in Kolkata.</p>
+        </div>
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-[#FFFBF5] via-[#FFFBF5]/80 to-transparent z-10"></div>
+        <div class="relative max-w-5xl mx-auto text-center px-4 z-20">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
+                Conference <span class="gradient-text">Registration</span>
+            </h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Secure your place at MetaSphere 2026. Find all the details on fees and payment procedures below.</p>
+        </div>
+    </section>
+
+    <main class="py-20 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 space-y-20">
+
+            <div>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Registration Fees</h2>
+                    <p class="mt-3 text-lg text-gray-600">All fees are inclusive of taxes.</p>
+                </div>
+                <div class="w-full overflow-x-auto">
+                    <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
+                        <thead class="bg-orange-50">
+                            <tr>
+                                <th class="py-4 px-6 text-left text-sm font-semibold text-orange-800 uppercase tracking-wider">Category</th>
+                                <th class="py-4 px-6 text-left text-sm font-semibold text-orange-800 uppercase tracking-wider">Indian Author (Early Bird)</th>
+                                <th class="py-4 px-6 text-left text-sm font-semibold text-orange-800 uppercase tracking-wider">Indian Author (Regular)</th>
+                                <th class="py-4 px-6 text-left text-sm font-semibold text-orange-800 uppercase tracking-wider">Foreign Author</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="py-4 px-6 font-medium text-gray-800">Student/ Research Scholar</td>
+                                <td class="py-4 px-6 text-gray-700">5500 INR/-</td>
+                                <td class="py-4 px-6 text-gray-700">6000 INR/-</td>
+                                <td class="py-4 px-6 text-gray-700">200 USD</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium text-gray-800">Academician</td>
+                                <td class="py-4 px-6 text-gray-700">6500 INR/-</td>
+                                <td class="py-4 px-6 text-gray-700">7000 INR/-</td>
+                                <td class="py-4 px-6 text-gray-700">200 USD</td>
+                            </tr>
+                            <tr>
+                                <td class="py-4 px-6 font-medium text-gray-800">Industry Professionals</td>
+                                <td class="py-4 px-6 text-gray-700">7500 INR/-</td>
+                                <td class="py-4 px-6 text-gray-700">8000 INR/-</td>
+                                <td class="py-4 px-6 text-gray-700">200 USD</td>
+                            </tr>
+                             <tr class="bg-gray-50">
+                                <td class="py-4 px-6 font-medium text-gray-800">Only Attending/Accompanying</td>
+                                <td class="py-4 px-6 text-gray-700">2500 INR/-</td>
+                                <td class="py-4 px-6 text-gray-700">2500 INR/-</td>
+                                <td class="py-4 px-6 text-gray-700">50 USD</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="py-4 px-6 font-medium text-gray-800">Extra Page (Maximum upto 2 pages)</td>
+                                <td class="py-4 px-6 text-gray-700">2000 INR/-</td>
+                                <td class="py-4 px-6 text-gray-700">2000 INR/-</td>
+                                <td class="py-4 px-6 text-gray-700">50 USD</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
+            <div>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900">How to Register</h2>
+                    <p class="mt-3 text-lg text-gray-600">Follow these steps to complete your registration.</p>
                 </div>
-        </section>
 
-        <main class="py-20 md:py-28">
-            <div class="max-w-7xl mx-auto px-4 space-y-24">
-
-                <div class="bg-orange-100 border-l-4 border-orange-500 text-orange-800 p-6 rounded-r-lg" role="alert">
-                    <div class="flex items-center">
-                        <i data-lucide="info" class="h-6 w-6 mr-4"></i>
+                <div class="max-w-4xl mx-auto space-y-12">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-orange-500 text-white flex items-center justify-center rounded-full text-2xl font-bold">1</div>
                         <div>
-                            <p class="font-bold text-lg">Registration Opening Soon</p>
-                            <p>Registration for MetaSphere 2026 will open in <strong>January 2026</strong>. Please check back for detailed information on fees and deadlines.</p>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-3">Review Important Policies</h3>
+                             <div class="bg-amber-100 border-l-4 border-amber-500 text-amber-800 p-4 rounded-r-lg space-y-3">
+                                <p>Final submissions require regular registration, with at least one author per paper registering at the regular rate.</p>
+                                <p>If more than one author from a paper attends to present, the requisite registration amount must be paid by each attending author. This includes the registration kit and food coupons for two days.</p>
+                                <p>If an author has more than one accepted paper, each paper must be registered separately.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div>
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Registration Categories</h2>
-                        <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Choose the category that best fits your profile.</p>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        
-                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <i data-lucide="book-marked" class="w-10 h-10 text-orange-500"></i>
-                                <h3 class="text-2xl font-bold text-gray-900">Academic</h3>
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-orange-500 text-white flex items-center justify-center rounded-full text-2xl font-bold">2</div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-3">Complete Your Payment</h3>
+                            <p class="text-gray-600 mb-6">Payment can be made via Bank Transfer (NEFT/RTGS/Net) or UPI. Credit card payments are not accepted.</p>
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="bg-white p-6 rounded-lg border border-gray-200">
+                                    <h4 class="text-lg font-bold text-gray-900 mb-4">Bank Transfer (NEFT/RTGS)</h4>
+                                    <ul class="space-y-2 text-sm">
+                                        <li class="flex justify-between"><span class="font-semibold text-gray-600">Bank Name:</span> <span class="text-right">Indian Overseas Bank</span></li>
+                                        <li class="flex justify-between"><span class="font-semibold text-gray-600">Party Name:</span> <span class="text-right">Institute of Engineering & Management Trust</span></li>
+                                        <li class="flex justify-between"><span class="font-semibold text-gray-600">Account No:</span> <span class="text-right">164201000000488</span></li>
+                                        <li class="flex justify-between"><span class="font-semibold text-gray-600">Account Type:</span> <span class="text-right">Savings</span></li>
+                                        <li class="flex justify-between"><span class="font-semibold text-gray-600">IFSC Code:</span> <span class="text-right">IOBA0001642</span></li>
+                                        <li class="flex justify-between"><span class="font-semibold text-gray-600">Branch:</span> <span class="text-right">Sector- V</span></li>
+                                        <li class="flex justify-between"><span class="font-semibold text-gray-600">Swift Code:</span> <span class="text-right">IOBAINBB193</span></li>
+                                        <li class="flex justify-between"><span class="font-semibold text-gray-600">MICR:</span> <span class="text-right">700020049</span></li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white p-6 rounded-lg border border-gray-200 flex flex-col items-center justify-center">
+                                    <h4 class="text-lg font-bold text-gray-900 mb-4">UPI Payment</h4>
+                                    <div class="w-40 h-40 bg-gray-100 rounded-md flex items-center justify-center text-gray-500 mb-2">
+                                        <span class="text-sm">QR Code Space</span>
+                                    </div>
+                                    <p class="mt-2 font-semibold text-gray-800">UPI ID: iemt@iob</p>
+                                </div>
                             </div>
-                            <p class="text-gray-600 mb-6">For faculty, researchers, and academic professionals.</p>
-                            <ul class="space-y-3 text-gray-700 list-disc list-inside">
-                                <li>Early Bird Discount Available</li>
-                                <li>Access to all sessions</li>
-                                <li>Conference proceedings</li>
-                                <li>Certificate of participation</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <i data-lucide="briefcase" class="w-10 h-10 text-orange-500"></i>
-                                <h3 class="text-2xl font-bold text-gray-900">Industry</h3>
-                            </div>
-                             <p class="text-gray-600 mb-6">For corporate and industry participants.</p>
-                            <ul class="space-y-3 text-gray-700 list-disc list-inside">
-                                <li>Networking opportunities</li>
-                                <li>Industry-focused sessions</li>
-                                <li>Exhibition access</li>
-                                <li>Digital proceedings</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
-                            <div class="flex items-center space-x-4 mb-4">
-                                <i data-lucide="graduation-cap" class="w-10 h-10 text-orange-500"></i>
-                                <h3 class="text-2xl font-bold text-gray-900">Students</h3>
-                            </div>
-                             <p class="text-gray-600 mb-6">For undergraduate and graduate students.</p>
-                            <ul class="space-y-3 text-gray-700 list-disc list-inside">
-                                <li>Special student rates</li>
-                                <li>Student competition access</li>
-                                <li>Mentorship sessions</li>
-                                <li>Career guidance workshops</li>
-                            </ul>
                         </div>
                     </div>
-                </div>
-
-                <div>
-                    <div class="text-center mb-16">
-                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Important Dates</h2>
-                        <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Mark your calendar with these key deadlines.</p>
-                    </div>
-                    <div class="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
-                        <div class="space-y-6">
-                            <div class="flex items-center justify-between p-4 bg-orange-50 rounded-lg">
-                                <p class="font-semibold text-gray-800">Registration Opens</p>
-                                <p class="font-bold text-orange-600 text-lg">January 15, 2026</p>
-                            </div>
-                            <div class="flex items-center justify-between p-4 bg-orange-50 rounded-lg">
-                                <p class="font-semibold text-gray-800">Early Bird Deadline</p>
-                                <p class="font-bold text-orange-600 text-lg">April 30, 2026</p>
-                            </div>
-                            <div class="flex items-center justify-between p-4 bg-orange-50 rounded-lg">
-                                <p class="font-semibold text-gray-800">Regular Registration Deadline</p>
-                                <p class="font-bold text-orange-600 text-lg">June 15, 2026</p>
+                    
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-orange-500 text-white flex items-center justify-center rounded-full text-2xl font-bold">3</div>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800 mb-3">Confirm Your Registration via Email</h3>
+                            <div class="bg-red-100 border-l-4 border-red-500 text-red-800 p-4 rounded-r-lg">
+                                <p class="font-bold">This is a mandatory step.</p>
+                                <p>After payment, you must send an email with a screenshot of the transaction to <a href="mailto:win6@iem.edu.in" class="font-semibold underline">metaSphere2026@iem.edu.in</a>.</p>
+                                <p>Your email must include your <strong class="font-bold">Paper ID</strong> and <strong class="font-bold">Paper Title</strong>. When making the transfer, please also mention the Paper ID in the transaction remarks.</p>
+                                <p class="mt-2">Failure to send this email before the deadline will result in an invalid registration.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="text-center">
-                     <h2 class="text-3xl font-bold text-gray-900">Have Questions?</h2>
-                     <p class="mt-3 text-gray-600 max-w-2xl mx-auto">For any inquiries regarding registration, please don't hesitate to reach out to our committee.</p>
-                     <a href="mailto:win6@iem.edu.in" class="mt-6 inline-block bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-orange-700 transition-all duration-300">
-                        Contact Us at MetaSphere2026@iem.edu.in
+            <section class="py-16">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Cancellation Policy</h2>
+                        <p class="mt-3 text-lg text-gray-600">Please review the policy carefully before completing your registration.</p>
+                    </div>
+                    <div class="max-w-3xl mx-auto">
+                        <div class="bg-red-100 border-l-4 border-red-500 text-red-900 p-6 rounded-r-lg shadow-md" role="alert">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 h-6 w-6 mr-4"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+                                <div>
+                                    <p class="text-xl font-bold">Please Note:</p>
+                                    <p class="text-lg">There will be no cancellation after Registration.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-16">
+                <div class="max-w-3xl mx-auto text-center px-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Have Questions?</h2>
+                    <p class="text-lg text-gray-600 mb-8">For any inquiries regarding registration, please don't hesitate to reach out to our committee.</p>
+                    <a href="mailto:MetaSphere2026@iem.edu.in" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-semibold rounded-lg shadow-lg text-white bg-orange-500 hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500 transition duration-300">
+                        Contact Us at metaSphere2026@iem.edu.in
                     </a>
                 </div>
-
-            </div>
-        </main>
-        
-        <footer class="bg-gray-800 text-gray-300">
-            </footer>
-    </div>
-        <footer class="bg-gray-800 text-gray-300">
+            </section>
+            
+        </div>
+    </main>
+    
+<!-- footer -->
+<footer class="bg-gray-800 text-gray-300">
     <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
@@ -268,7 +254,6 @@
                     <li><a href="/scientific-committee.html" class="hover:text-orange-400 transition-colors">Scientific Committee</a></li>
                     <li><a href="/AdvisoryCommittee.html" class="hover:text-orange-400 transition-colors">Advisory Committee</a></li>
                     <li><a href="/TechCommittee.html" class="hover:text-orange-400 transition-colors">Technical Program Committee</a></li>
-                    <!-- <li><a href="/#tracks" class="hover:text-orange-400 transition-colors">Tracks</a></li> -->
                     <li><a href="/registration.html" class="hover:text-orange-400 transition-colors">Registration</a></li>
                 </ul>
             </div>
@@ -300,26 +285,10 @@
         </div>
     </div>
 </footer>
-</body>
-<script src="/script.js"></script>
+
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
-
-        // Dropdown Menu Logic
-        function toggleDropdown(id) {
-            const dropdown = document.getElementById(id);
-            const isHidden = dropdown.classList.contains('hidden');
-            document.querySelectorAll('nav .absolute').forEach(el => el.classList.add('hidden'));
-            if (isHidden) {
-                dropdown.classList.remove('hidden');
-            }
-        }
-        document.addEventListener('click', function(event) {
-            const nav = document.querySelector('nav');
-            if (nav && !nav.contains(event.target)) {
-                document.querySelectorAll('nav .absolute').forEach(el => el.classList.add('hidden'));
-            }
-        });
     </script>
+</body>
 </html>
