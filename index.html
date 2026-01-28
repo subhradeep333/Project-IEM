@@ -951,13 +951,13 @@
             class="py-20 md:py-28 bg-white/50"
         >
             <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-16">
+                <div class="mb-12">
                     <h2
                         class="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
                     >
                         Welcome to MetaSphere 2026!
                     </h2>
-                    <p class="text-gray-700 max-w-3xl mx-auto text-lg">
+                    <p class="text-gray-700 text-lg max-w-4xl">
                         The Global Conference on Cloud Computing, Virtualization
                         & Metaverse (MetaSphere 2026) will be held in Kolkata,
                         India, on 21st & 22nd August, 2026. This conference is
@@ -972,79 +972,112 @@
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- Carousel -->
+                <div class="grid lg:grid-cols-3 gap-12">
                     <div
-                        class="w-full relative overflow-hidden rounded-xl shadow-lg"
+                        class="lg:col-span-2 grid md:grid-cols-2 gap-8 items-start"
                     >
                         <div
-                            id="tech-carousel"
-                            class="relative w-full h-80 overflow-hidden"
+                            class="w-full relative overflow-hidden rounded-xl shadow-lg"
                         >
-                            <img
-                                src="/Assets/Cloud.jpg"
-                                class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
-                            />
-                            <img
-                                src="/Assets/Meta.jpeg"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
-                            />
-                            <img
-                                src="/Assets/AI.webp"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
-                            />
-                            <img
-                                src="/Assets/Data-Visualization-thumbnail.jpg"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
-                            />
-                            <img
-                                src="/Assets/Quantum.jpg"
-                                class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
-                            />
+                            <div
+                                id="tech-carousel"
+                                class="relative w-full h-80 overflow-hidden"
+                            >
+                                <img
+                                    src="/Assets/Cloud.jpg"
+                                    class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000"
+                                />
+                                <img
+                                    src="/Assets/Meta.jpeg"
+                                    class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                                />
+                                <img
+                                    src="/Assets/AI.webp"
+                                    class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                                />
+                                <img
+                                    src="/Assets/Data-Visualization-thumbnail.jpg"
+                                    class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                                />
+                                <img
+                                    src="/Assets/Quantum.jpg"
+                                    class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="space-y-4 text-gray-700">
+                            <h3 class="text-2xl font-semibold text-gray-900">
+                                MetaSphere Overview
+                            </h3>
+                            <p class="text-sm leading-relaxed">
+                                The aim is to foster cross-disciplinary
+                                dialogue, showcase cutting-edge work, and
+                                accelerate deployment of integrated systems that
+                                underpin future metaverse infrastructures.
+                            </p>
+                            <ul class="list-disc list-inside space-y-2 text-sm">
+                                <li>
+                                    The metaverse requires robust underlying
+                                    infrastructure: scalable cloud,
+                                    virtualization, edge computing, and
+                                    distributed services.
+                                </li>
+                                <li>
+                                    Virtualization technologies (compute,
+                                    network, storage) are foundational to how
+                                    metaverse systems will scale, isolate, and
+                                    orchestrate workloads.
+                                </li>
+                                <li>
+                                    Integrating real-world systems (IoT, digital
+                                    twins, real-time simulation) with metaverse
+                                    layers requires new architectural patterns.
+                                </li>
+                                <li>
+                                    Business, governance, security, privacy,
+                                    economics, and user experience challenges
+                                    abound; this conference addresses them
+                                    jointly.
+                                </li>
+                                <li>
+                                    The conference is timely: the global
+                                    metaverse market is projected to grow
+                                    dramatically by 2026.
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
-                    <!-- About Text -->
-                    <div class="space-y-6 text-gray-700">
-                        <h3 class="text-2xl font-semibold text-gray-900">
-                            MetaSphere Overview
-                        </h3>
-                        <p>
-                            The aim is to foster cross-disciplinary dialogue,
-                            showcase cutting-edge work, explore challenges and
-                            opportunities, and accelerate deployment of
-                            integrated systems that underpin future metaverse
-                            infrastructures.
-                        </p>
-                        <ul class="list-disc list-inside space-y-2">
-                            <li>
-                                The metaverse requires robust underlying
-                                infrastructure: scalable cloud, virtualization,
-                                edge computing, and distributed services.
-                            </li>
-                            <li>
-                                Virtualization technologies (compute, network,
-                                storage) are foundational to how metaverse
-                                systems will scale, isolate, and orchestrate
-                                workloads.
-                            </li>
-                            <li>
-                                Integrating real-world systems (IoT, digital
-                                twins, real-time simulation) with metaverse
-                                layers requires new architectural patterns.
-                            </li>
-                            <li>
-                                Business, governance, security, privacy,
-                                economics, and user experience challenges
-                                abound; this conference addresses them jointly.
-                            </li>
-                            <li>
-                                The conference is timely: the global metaverse
-                                market is projected to grow dramatically by
-                                2026.
-                            </li>
-                        </ul>
-                    </div>
+                    <aside class="space-y-6" data-aos="fade-left">
+                        <div
+                            class="bg-white border border-gray-100 p-6 rounded-2xl shadow-lg"
+                        >
+                            <h3
+                                class="text-lg font-bold text-gray-900 border-b pb-2 mb-4"
+                            >
+                                Important Deadlines
+                            </h3>
+                            <ul class="space-y-3 text-sm text-gray-600">
+                                <li class="flex justify-between">
+                                    <span>Full Paper:</span>
+                                    <strong>Apr 5, 2026</strong>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Acceptance:</span>
+                                    <strong>Jun 5, 2026</strong>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Camera-Ready:</span>
+                                    <strong>Jul 5, 2026</strong>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Early Bird:</span>
+                                    <strong>Aug 5, 2026</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
                 </div>
             </div>
         </section>
@@ -1057,13 +1090,13 @@
             class="py-20 md:py-28 bg-white/40"
         >
             <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-16">
+                <div class="mb-12">
                     <h2
                         class="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
                     >
                         About IEM
                     </h2>
-                    <p class="text-gray-700 max-w-3xl mx-auto text-lg">
+                    <p class="text-gray-700 text-lg max-w-4xl">
                         The IEM group is an acclaimed educational group amongst
                         industry-centred academic training organisations,
                         setting high standards in technical and managerial
