@@ -157,14 +157,12 @@ function setupSlideshow(containerId, selector, interval) {
     }, interval);
 }
 function toggleModal() {
-    const modal = document.getElementById("trackModal");
-    modal.classList.toggle("hidden");
-    if (!modal.classList.contains("hidden")) {
-        document.body.style.overflow = "hidden";
-    } else {
-        document.body.style.overflow = "auto";
-    }
+  const modal = document.getElementById("trackModal");
+
+  modal.classList.toggle("hidden");
+  document.body.classList.toggle("overflow-hidden");
 }
+
 window.onclick = function (event) {
     const modal = document.getElementById("trackModal");
     if (event.target == modal) {
